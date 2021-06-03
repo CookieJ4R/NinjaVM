@@ -1,0 +1,18 @@
+Nnja Virtual Machine Debugger Specification:
+
+Use --debug to start the debugger
+
+Debug Instructions:
+
+	list        - 	lists the current program
+	step 	    - 	executes the current instruction and moves to the next instruction
+	run         - 	runs the program from the current position until it reaches the end or a breakpoint.
+	inspect     - 	inspect one of the following areas: [stack, data, object, res, bip]
+			stack  = inspect the "Stack"
+			data   = inspect the "Static Data Area"
+			object = inspect an "Object" located at a specified Address
+			res    = inspect the "Return Value Register"
+			bip    = inspect the "Big Integer Processor"
+	breakpoint  - 	sets a breakpoint at the specified position. It gets removed after the program reaches the breakpoint.
+	gc	    -	manually runs the garbage collector 
+	quit	    -	stops the virtual machine
